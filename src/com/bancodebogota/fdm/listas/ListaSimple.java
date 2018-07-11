@@ -14,6 +14,22 @@ public class ListaSimple {
     private Nodo root;
     private Nodo ultimo;
 
+    public Nodo getRoot() {
+        return root;
+    }
+
+    public void setRoot(Nodo root) {
+        this.root = root;
+    }
+
+    public Nodo getUltimo() {
+        return ultimo;
+    }
+
+    public void setUltimo(Nodo ultimo) {
+        this.ultimo = ultimo;
+    }
+
     public ListaSimple() {
         this.root = null;
         this.ultimo = null;
