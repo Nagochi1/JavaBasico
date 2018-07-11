@@ -10,7 +10,7 @@ package com.bancodebogota.fdm.listas;
  * @author NAGOCHI
  */
 public class Nodo {
-    
+
     private Nodo siguiente;
     private int dato;
 
@@ -30,6 +30,4 @@ public class Nodo {
         this.dato = dato;
     }
 
-     
-    
 }

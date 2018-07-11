@@ -15,9 +15,9 @@ public class JavaBasico {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         ListaSimple lista = new ListaSimple();
-        
+
         lista.ingresarNodo(1);
         lista.ingresarNodo(2);
         lista.ingresarNodo(3);
@@ -28,9 +28,9 @@ public class JavaBasico {
         lista.ingresarNodo(8);
         lista.ingresarNodo(9);
         lista.ingresarNodo(10);
-        
+
         lista.imprimirLista();
-        
+
     }
-    
+
 }

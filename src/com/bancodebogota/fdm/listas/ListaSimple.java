@@ -10,38 +10,38 @@ package com.bancodebogota.fdm.listas;
  * @author NAGOCHI
  */
 public class ListaSimple {
-    
+
     private Nodo root;
     private Nodo ultimo;
-    
-    public ListaSimple(){
+
+    public ListaSimple() {
         this.root = null;
         this.ultimo = null;
     }
-    
-    public void ingresarNodo(int dato){
+
+    public void ingresarNodo(int dato) {
         Nodo nodoNuevo = new Nodo();
         nodoNuevo.setDato(dato);
-        
-        if(root == null){
+
+        if (root == null) {
             root = nodoNuevo;
             root.setSiguiente(null);
             ultimo = root;
-           
-        }else{
+
+        } else {
             ultimo.setSiguiente(nodoNuevo);
             nodoNuevo.setSiguiente(null);
             ultimo = nodoNuevo;
         }
     }
-    
-    public void imprimirLista(){
+
+    public void imprimirLista() {
         Nodo actual = new Nodo();
         actual = root;
-        while(actual != null){
+        while (actual != null) {
             System.out.println(actual.getDato());
             actual = actual.getSiguiente();
         }
     }
-    
+
 }
