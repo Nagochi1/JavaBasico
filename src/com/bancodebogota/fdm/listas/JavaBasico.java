@@ -37,17 +37,22 @@ public class JavaBasico {
         lista.imprimirLista();
 
         ListaArray listaArray = new ListaArray();
+        try {
+            listaArray.insertar(1);
+            listaArray.insertar(2);
+            listaArray.insertar("3");
+            listaArray.insertar("4");
+            listaArray.insertar("5");
+            listaArray.insertar("6");
+            listaArray.insertar("7");
+            listaArray.insertar("8");
+            listaArray.insertar("9");
+            listaArray.insertar("10");
 
-        listaArray.insertar("1");
-        listaArray.insertar("2");
-        listaArray.insertar("3");
-        listaArray.insertar("4");
-        listaArray.insertar("5");
-        listaArray.insertar("6");
-        listaArray.insertar("7");
-        listaArray.insertar("8");
-        listaArray.insertar("9");
-        listaArray.insertar("10");
+        }catch (Exception ex) {
+            System.out.println(ex);
+            
+        }
 
         System.out.println("\nLista Array");
         listaArray.imprimir();

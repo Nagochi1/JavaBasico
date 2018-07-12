@@ -23,23 +23,26 @@ public class ListaArray {
         this.posicion = 0;
     }
 
-    public void insertar(Object obj) {
-        
-        
-        dato[posicion] = obj;
-        if (posicion == (dimension / incremento)) {
-            dato = Arrays.copyOf(dato, (dimension * incremento));
-            dimension = dimension * incremento;
+    public void insertar(Object obj) throws Exception {
 
+        if (dato[posicion] instanceof String) {
+            dato[posicion] = obj;
+
+            if (posicion == (dimension / incremento)) {
+                dato = Arrays.copyOf(dato, (dimension * incremento));
+                dimension = dimension * incremento;
+
+            }
+
+            posicion++;
+        }else{
+            throw new Exception("Tipo no válido");
         }
-
-        posicion++;
-
     }
 
     public void imprimir() {
         for (int i = 0; i < posicion; i++) {
-            System.out.println("Se agregó digito: " + dato[i].toString() + " en posición: " + i);
+            System.out.println("Se agregó digito: " + dato[i] + " en posición: " + i);
         }
     }
 
