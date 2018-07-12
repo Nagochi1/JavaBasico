@@ -24,7 +24,8 @@ public class ListaArray {
     }
 
     public void insertar(Object obj) {
-
+        
+        
         dato[posicion] = obj;
         if (posicion == (dimension / incremento)) {
             dato = Arrays.copyOf(dato, (dimension * incremento));

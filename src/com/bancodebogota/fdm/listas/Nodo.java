@@ -12,7 +12,7 @@ package com.bancodebogota.fdm.listas;
 public class Nodo {
 
     private Nodo siguiente;
-    private String dato;
+    private Object dato;
 
     public Nodo getSiguiente() {
         return siguiente;
@@ -22,12 +22,14 @@ public class Nodo {
         this.siguiente = siguiente;
     }
 
-    public String getDato() {
+    public Object getDato() {
         return dato;
     }
 
-    public void setDato(String dato) {
+    public void setDato(Object dato) {
         this.dato = dato;
     }
+
+    
 
 }

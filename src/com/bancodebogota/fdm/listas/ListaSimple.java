@@ -35,9 +35,15 @@ public class ListaSimple {
         this.ultimo = null;
     }
 
-    public void ingresarNodo(String dato) {
+    public void ingresarNodo(Object dato) throws Exception {
         Nodo nodoNuevo = new Nodo();
-        nodoNuevo.setDato(dato);
+
+        if (dato instanceof String) {
+            nodoNuevo.setDato(dato);
+
+        }else{
+            throw new Exception("Tipo no válido");
+        }
 
         if (root == null) {
             root = nodoNuevo;
