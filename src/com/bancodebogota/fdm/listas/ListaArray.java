@@ -12,20 +12,34 @@ import java.util.Arrays;
  * @author NAGOCHI
  */
 public class ListaArray {
-    
+
     private Object[] dato;
-    private int dimension;
-    private int incremento;
+    private int dimension = 4;
+    private int incremento = 2;
     private int posicion;
 
     public ListaArray() {
         this.dato = new Object[this.dimension];
-        this.posicion=0;
+        this.posicion = 0;
     }
-    
-    
-    
-    
-    
-    
+
+    public void insertar(Object obj) {
+
+        dato[posicion] = obj;
+        if (posicion == (dimension / incremento)) {
+            dato = Arrays.copyOf(dato, (dimension * incremento));
+            dimension = dimension * incremento;
+
+        }
+
+        posicion++;
+
+    }
+
+    public void imprimir() {
+        for (int i = 0; i < posicion; i++) {
+            System.out.println("Se agregó digito: " + dato[i].toString() + " en posición: " + i);
+        }
+    }
+
 }
