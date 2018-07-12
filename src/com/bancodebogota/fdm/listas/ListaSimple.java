@@ -35,7 +35,7 @@ public class ListaSimple {
         this.ultimo = null;
     }
 
-    public void ingresarNodo(int dato) {
+    public void ingresarNodo(String dato) {
         Nodo nodoNuevo = new Nodo();
         nodoNuevo.setDato(dato);
 
