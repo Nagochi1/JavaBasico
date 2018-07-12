@@ -11,19 +11,21 @@ import java.util.Arrays;
  *
  * @author NAGOCHI
  */
-public class ListaArray {
-
-    private Object[] dato;
+public class ListaArray <T>{
+    
+    
+    private T[] dato;
     private int dimension = 4;
     private int incremento = 2;
     private int posicion;
 
+   
     public ListaArray() {
-        this.dato = new Object[this.dimension];
+        this.dato =  (T[])new Object[this.dimension];
         this.posicion = 0;
     }
 
-    public void insertar(Object obj) {
+    public void insertar(T obj) {
 
         dato[posicion] = obj;
         if (posicion == (dimension / incremento)) {
